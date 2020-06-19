@@ -1,10 +1,17 @@
-const mainWhatsappWidget  = document.querySelector('#whatsapp-widget')
+async function initWidget(params)  {
+    const wpp = document.createElement('div');
+    wpp.setAttribute("id", "whatsapp-widget");
+    wpp.classList.add('whatsapp-widget');
 
-document.addEventListener("DOMContentLoaded", function(event) {
-    createElements()
-});
+    const body = document.querySelector('body');
+    body.appendChild(wpp)
 
-async function createElements() {
+    await createElements(params)
+}
+
+async function createElements(params) {
+    const mainWhatsappWidget  = document.querySelector('#whatsapp-widget')
+
     const strElement = `<a href="#" id="whatsapp-widget-target" class="whatsapp-widget-target pulse">
                             <img id="whatsapp-widget-icon" class="whatsapp-widget-icon" src="http://200.98.129.191:8080/dashboard/assets/img/whatsapp-icon.png"/>
                         </a>`
@@ -15,6 +22,7 @@ async function createElements() {
 }
 
 async function setStyles() {
+    const mainWhatsappWidget  = document.querySelector('#whatsapp-widget')
     const targetWhasappWidget = mainWhatsappWidget.querySelector('#whatsapp-widget-target')
     const iconWhasappWidget   = targetWhasappWidget.querySelector('#whatsapp-widget-icon')
 
