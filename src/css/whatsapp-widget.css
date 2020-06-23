@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap');
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+/** BEGIN MAIN WIDGET **/
+#whatsapp-widget {
+    font-family: "Roboto";
+    position:    fixed;
+    bottom:      20px;
+    right:       40px;
+    z-index:     999;
+    transition:  0.5s;
+}
+
+#whatsapp-widget-target {
+    width: 60px;
+    height : 60px;
+    display: table;
+    background: #24CD63;
+    color: #fff;
+    text-align: center;
+    border-radius: 50%;
+}
+
+#whatsapp-widget-icon {
+    position: absolute;
+    display: table-cell;
+    vertical-align: middle;
+    max-width: 30x;
+    max-height: 30px;
+    top: 25%;
+    left : 25%;
+}
+/** BEGIN MAIN WIDGET **/
+
+/** BEGIN POPUP WIDGET **/
+#whatsapp-widget-chat {
+    position: absolute;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 96px;
+    width: 320px;
+    height: 80px;
+    right: 40px;
+    z-index: 999999;
+    bottom: 250px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 24px 0px;
+    transition: opacity 0.3s ease 0s, margin 0.3s ease 0s, visibility 0.3s ease 0s;
+}
+
+#whatsapp-widget-chat-header {
+    background: #095E54;
+    height: 220px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    color: #fff;
+}
+
+#whatsapp-widget-chat-header .close {
+    display: flex;
+    color: #cecece;
+    cursor: pointer;
+    top: 8px;
+    position: absolute;
+    font-size: 16px;
+    font-weight: 600;
+    right: 8px;
+    width: 20px;
+    height: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+#whatsapp-widget-chat-header .bot {
+    padding: 24px 20px;
+    display: flex;
+    align-items: center;
+}
+
+#whatsapp-widget-chat-header .bot-img {
+    width: 60px;
+    height: 60px;
+    display: block;
+    position: relative;
+    border-radius: 50%;
+    background: #ffffff;
+}
+
+#whatsapp-widget-chat-header .bot-img img {
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+#whatsapp-widget-chat-header .name {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    color: #fff;
+}
+
+#whatsapp-widget-chat-header .status {
+    font-size: 13px;
+    margin-top: 4px;
+    line-height: 18px;
+    color: #fff;
+}
+/** END POPUP WIDGET **/
+
+/** BEGIN POPUP CHAT WIDGET **/
+#whatsapp-widget-chat-chat {
+    position: absolute;
+    max-height: 500px;
+    height: 250px;
+    width: 100%;
+    top: 100px;
+    /*padding           : 20px 20px 20px 10px;*/
+    overflow: auto;
+    z-index: 0;
+    background-color: rgb(230, 221, 212);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+#whatsapp-widget-chat-chat:before {
+    position: absolute;
+    background-image: url('https://external-preview.redd.it/rEwFriCkfAtjOb5b-23b4tGGVcuvfaBqamYNJrgxnLM.png?auto=webp&s=f3bf0b5c90e4c5fda12ff2139781c854554fd198');
+    background-color: #E6DDD4;
+    width: 100%;
+    height: 100%;
+    display: block;
+    opacity: 0.08;
+    left: 0px;
+    top: 0px;
+    content: '';
+    z-index: 0;
+}
+
+#whatsapp-widget-chat-chat .message {
+    margin-top: 15px;
+    position: relative;
+    padding: 7px 15px 15px;
+    border-radius: 0px 8px 8px;
+    margin-left: 15px;
+    margin-right: 15px;
+    background-color: #fff;
+    max-width: max-content;
+}
+
+#whatsapp-widget-chat-chat .header {
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 18px;
+    color: rgba(0, 0, 0, 0.4);
+}
+
+#whatsapp-widget-chat-chat .msg {
+    font-size: 14px;
+    margin-top: 4px;
+    line-height: 19px;
+    color: rgb(17, 17, 17);
+}
+
+#whatsapp-widget-chat-chat .date {
+    position: absolute;
+    font-size: 11px;
+    margin-top: 2px;
+    line-height: 19px;
+    color: rgba(0, 0, 0, 0.4);
+    right: 15px;
+    bottom: 0;
+}
+
+/** END POPUP CHAT WIDGET **/
+
+/** BEGIN POPUP FOOTER WIDGET **/
+#whatsapp-widget-chat-footer {
+    position: absolute;
+    bottom: -270px;
+    height: 60px;
+    width: 100%;
+    background: #fff;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+#whatsapp-widget-chat-footer a {
+    padding: 10px;
+    display: flex;
+    flex-direction : column;
+    color: #fff;
+    text-decoration: none;
+    background: #24CD63;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 25px;
+    width: 250px;
+    border-radius: 25px;
+}
+/** BEGIN POPUP FOOTER WIDGET **/
