@@ -132,11 +132,12 @@
 #whatsapp-widget-chat-chat:before {
     position: absolute;
     background-image: url('https://external-preview.redd.it/rEwFriCkfAtjOb5b-23b4tGGVcuvfaBqamYNJrgxnLM.png?auto=webp&s=f3bf0b5c90e4c5fda12ff2139781c854554fd198');
+    background-size: contain;
     background-color: #E6DDD4;
     width: 100%;
     height: 100%;
     display: block;
-    opacity: 0.08;
+    opacity: 0.8;
     left: 0px;
     top: 0px;
     content: '';
