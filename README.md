@@ -6,7 +6,7 @@ Simple floating plugin in the footer of your website:
 
 Simple floating plugin in the footer of your website:
 
-See the [project page](https://wwww.wribeiiro.com/whatsapp-widget/) for a demonstration.
+See the [project page](https://www.wribeiiro.com/whatsapp-widget/) for a demonstration.
 
 ## Quick start
 
