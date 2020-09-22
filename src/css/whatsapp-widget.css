@@ -97,6 +97,7 @@
     height: 100%;
     width: 100%;
     border-radius: 50%;
+    object-fit: contain;
 }
 
 #whatsapp-widget-chat-header .name {
@@ -184,7 +185,7 @@
 /** BEGIN POPUP FOOTER WIDGET **/
 #whatsapp-widget-chat-footer {
     position: absolute;
-    bottom: -270px;
+    bottom: 0;
     height: 60px;
     width: 100%;
     background: #fff;
@@ -195,14 +196,14 @@
 #whatsapp-widget-chat-footer a {
     padding: 10px;
     display: flex;
-    flex-direction : column;
+    flex-direction: column;
     color: #fff;
     text-decoration: none;
     background: #24CD63;
     justify-content: center;
     align-items: center;
-    margin-top: 10px;
-    margin-left: 35px;
+    vertical-align: middle;
+    margin: 6px auto;
     width: 250px;
     border-radius: 25px;
 }

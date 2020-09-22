@@ -63,12 +63,12 @@ function createElements(params) {
                                 <div class="whatsapp-widget-chat-chat msg" id="msgBot"></div>
                                 <div class="whatsapp-widget-chat-chat date" id="dateBot"></div>
                             </div>
-                        </div>
 
-                        <div class="whatsapp-widget-chat-footer" id="whatsapp-widget-chat-footer">
-                            <a href="#" id="whatsapp-widget-open-modal" class="whatsapp-widget-open-modal pulse">   
-                                ${paramsDefault.optionsChat.text}       
-                            </a>
+                            <div class="whatsapp-widget-chat-footer" id="whatsapp-widget-chat-footer">
+                                <a href="#" id="whatsapp-widget-open-modal" class="whatsapp-widget-open-modal">   
+                                    ${paramsDefault.optionsChat.text}       
+                                </a>
+                            </div>
                         </div>
                     </div>`
 
