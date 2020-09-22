@@ -81,7 +81,7 @@ function setEvents() {
 
     const setEventClickClose = () => {
         document.getElementById("close").addEventListener("click", function() {
-            document.getElementById("whatsapp-widget-chat").style.opacity = 0;
+            document.getElementById("whatsapp-widget-chat").style.opacity = 0
         })
     }
 
@@ -108,15 +108,16 @@ function setEvents() {
             }, 2000);
         }
 
-        document.getElementById("whatsapp-widget-target").addEventListener("click", function() {
-            
+        document.getElementById("whatsapp-widget-target").addEventListener("click", function(e) {
+            e.preventDefault()
+
             const mainWhatsappChat = document.querySelector('#whatsapp-widget-chat')
 
             if (mainWhatsappChat.style.opacity == 0) {
-                mainWhatsappChat.style.opacity = 1;
+                mainWhatsappChat.style.opacity = 1
                 simulateMessage()
             } else {
-                mainWhatsappChat.style.opacity = 0;
+                mainWhatsappChat.style.opacity = 0
             }
         })
     }
@@ -127,14 +128,14 @@ function setEvents() {
 }
 
 function modalWhatsapp() {
-    const x = screen.width  / 2 - 800 / 2;
-    const y = screen.height / 2 - 550 / 2;
+    const x = screen.width  / 2 - 800 / 2
+    const y = screen.height / 2 - 550 / 2
 
-    window.open(paramsDefault.optionsChat.buttonTarget, ``,'height=550,width=800,left='+x+',top='+y);
+    window.open(paramsDefault.optionsChat.buttonTarget, ``,'height=550,width=800,left='+x+',top='+y)
 }
 
 function timeNow() {
-    const timeString = new Date().toTimeString();
+    const timeString = new Date().toTimeString()
 
-    return timeString.substring(0, 5);
+    return timeString.substring(0, 5)
 }
