@@ -13,8 +13,8 @@ See the [project page](https://wwww.wribeiiro.com/whatsapp-widget/) for a demons
 1\.  Add whatsapp-widget files:
 
 ```html
-<link  href="/path/to/jquery.whatsapp-widget.css" rel="stylesheet">
-<script src="/path/to/jquery.whatsapp-widget.js"></script>
+<link  href="/path/to/whatsapp-widget.css" rel="stylesheet">
+<script src="/path/to/whatsapp-widget.js"></script>
 ```
 
 
