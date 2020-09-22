@@ -24,8 +24,8 @@ initWidget({})
 ```
 
 4\. Standard parameters! But you can pass a new configuration object, see below:
-```object
-{
+```javascript
+const config = {
     optionsPopup: {
         background: '#095E54',
         color: '#FFFFFF'
@@ -45,4 +45,6 @@ initWidget({})
         messageTyping: 'is typing...'
     }
 }
+
+initWidget(config)
 ```
