@@ -38,8 +38,9 @@
 /** BEGIN POPUP WIDGET **/
 #whatsapp-widget-chat {
     position: absolute;
-    opacity: 0;
     display: flex;
+    visibility: hidden;
+    opacity: 0;
     flex-direction: column;
     margin-bottom: 96px;
     width: 320px;
@@ -146,6 +147,7 @@
 }
 
 #whatsapp-widget-chat-chat .message {
+    display: none;
     margin-top: 15px;
     position: relative;
     padding: 7px 15px 15px;
