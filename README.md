@@ -4,8 +4,6 @@ Simple floating plugin in the footer of your website:
 # Screenshot
 ![Screenshot](https://github.com/wribeiiro/whatsapp-widget/blob/master/screenshot.jpeg)
 
-Simple floating plugin in the footer of your website:
-
 See the [project page](https://www.wribeiiro.com/whatsapp-widget/) for a demonstration.
 
 ## Quick start
