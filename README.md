@@ -3,7 +3,6 @@ Simple floating plugin in the footer of your website:
 
 # Screenshot
 ![gif3](https://user-images.githubusercontent.com/20648572/112698263-5eb59b80-8e9a-11eb-8619-223a06a2ade4.gif)
-![Screenshot](https://github.com/wribeiiro/whatsapp-widget/blob/master/screenshot.jpeg)
 
 See the [project page](https://www.wribeiiro.com/whatsapp-widget/) for a demonstration.
 
