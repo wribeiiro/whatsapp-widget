@@ -33,7 +33,9 @@ const config = {
         color: '#FFFFFF'
     },
     optionsChat: {
-        buttonTarget: `https://api.whatsapp.com/send?phone=+55479999999999&text=${encodeURIComponent("Hello everyone")}`,
+        buttonTarget: `https://api.whatsapp.com/send?`,
+        message:'Hello everyone',
+        phone:'+55479999999999',
         text: 'Open chat'
     },
     optionsBot: {
