@@ -8,8 +8,10 @@ let paramsDefault = {
         color: '#FFFFFF'
     },
     optionsChat: {
-        buttonTarget: `https://api.whatsapp.com/send?phone=+55479999999999&text=${encodeURIComponent("Hello everyone")}`,
-        text: 'Open chat'
+        buttonTarget: `https://api.whatsapp.com/send?`,
+        message:'Hello everyone',
+        phone:'+55479999999999',
+        text: 'Send'
     },
     optionsBot: {
         name: 'Bot',
@@ -48,7 +50,7 @@ function createElements(params) {
 
     const strChat = `<div class="whatsapp-widget-chat" id="whatsapp-widget-chat">
                         <div class="whatsapp-widget-chat-header" id="whatsapp-widget-chat-header" style="background: ${paramsDefault.optionsPopup.background}; color: ${paramsDefault.optionsPopup.color}">
-                            <div class="whatsapp-widget-chat-header close" id="close">x</div>
+                            <div class="whatsapp-widget-chat-header close" id="close">✖</div>
                             <div class="whatsapp-widget-chat-header bot">
                                 <div class="bot-img" id="bot-img">
                                     <img class="whatsapp-widget-chat-header" src="${paramsDefault.optionsBot.image}" />
@@ -67,6 +69,9 @@ function createElements(params) {
                                 <div class="whatsapp-widget-chat-chat date" id="dateBot"></div>
                             </div>
                             <div class="whatsapp-widget-chat-footer" id="whatsapp-widget-chat-footer">
+                                <div id="whatsapp-widget-chat-input-container">
+                                    <textarea rows="5" placeholder="Write a message here" id="whatsapp-widget-chat-input"></textarea>                        
+                                </div>
                                 <a href="#" id="whatsapp-widget-open-modal" class="whatsapp-widget-open-modal">   
                                     ${paramsDefault.optionsChat.text}       
                                 </a>
@@ -144,8 +149,12 @@ function setEvents() {
 function modalWhatsapp() {
     const x = screen.width  / 2 - 800 / 2
     const y = screen.height / 2 - 550 / 2
-
-    window.open(paramsDefault.optionsChat.buttonTarget, ``,`height=550,width=800,left=${x},top=${y}`)
+    const messageInput=document.getElementById("whatsapp-widget-chat-input");
+    let message = messageInput.value;
+    if (message.length === 0)
+        message = paramsDefault.optionsChat.message
+    let url = `${paramsDefault.optionsChat.buttonTarget}phone=${paramsDefault.optionsChat.phone}&text=${encodeURIComponent(message)}`
+    window.open(url, ``,`height=550,width=800,left=${x},top=${y}`)
 }
 
 function timeNow() {
