@@ -14,13 +14,14 @@ const Footer = ({ onSendMessage, buttonText }) => {
             <div id="whatsapp-widget-chat-input-container">
                 <input
                     id="whatsapp-widget-chat-input"
+                    data-testid="whatsapp-widget-chat-input"
                     type="text"
                     placeholder="Write your best message here..."
                     value={inputValue}
                     onChange={(e) => setInputValue(e.target.value)}
                 />
             </div>
-            <button disabled={!inputValue} id="whatsapp-widget-open-modal" className="whatsapp-widget-open-modal" onClick={handleSend}>
+            <button disabled={!inputValue} data-testid="whatsapp-widget-open-modal" id="whatsapp-widget-open-modal" className="whatsapp-widget-open-modal" onClick={handleSend}>
                 {buttonText}
             </button>
         </div>

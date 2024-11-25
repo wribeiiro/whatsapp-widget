@@ -9,7 +9,7 @@ const Main = ({ params }) => {
     const [displayMessage, setDisplayMessage] = useState(false);
     const [botStatus, setBotStatus] = useState(optionsBot.status);
     const [botMessage, setBotMessage] = useState(optionsBot.messageDefault);
-	const whatsAppLogoUrl = 'https://imagepng.org/wp-content/uploads/2017/08/WhatsApp-icone.png';
+    const whatsAppLogoUrl = 'https://imagepng.org/wp-content/uploads/2017/08/WhatsApp-icone.png';
 
     const checkVisibility = useCallback(() => {
         setDisplayMessage(false);
@@ -46,30 +46,30 @@ const Main = ({ params }) => {
     return (
         <div id="whatsapp-widget" className="whatsapp-widget">
             <span
-				onClick={(e) => {
-					e.preventDefault();
-					toggleChatVisibility();
-				}}
-				id="whatsapp-widget-target"
-				className="whatsapp-widget-target pulse"
-			>
+                onClick={(e) => {
+                    e.preventDefault();
+                    toggleChatVisibility();
+                }}
+                id="whatsapp-widget-target"
+                className="whatsapp-widget-target pulse"
+            >
                 <img
-					id="whatsapp-widget-icon"
-					className="whatsapp-widget-icon"
-					src={whatsAppLogoUrl}
-					alt="WhatsApp Icon"
-				/>
+                    id="whatsapp-widget-icon"
+                    className="whatsapp-widget-icon"
+                    src={whatsAppLogoUrl}
+                    alt="WhatsApp Icon"
+                />
             </span>
 
             {isChatVisible && (
-                <div className="whatsapp-widget-chat" id="whatsapp-widget-chat">
+                <div className="whatsapp-widget-chat" id="whatsapp-widget-chat" data-testid="whatsapp-widget-chat">
                     <Header
-                        botOptions={optionsBot}
+                        optionsBot={optionsBot}
                         onClose={toggleChatVisibility}
                         status={botStatus}
                     />
                     <Body
-                        botOptions={optionsBot}
+                        optionsBot={optionsBot}
                         message={botMessage}
                         isVisible={displayMessage}
                         openWhatsAppModal={openWhatsAppModal}
@@ -102,7 +102,8 @@ Main.propTypes = {
             messageDefault: string.isRequired,
             messageTyping: string.isRequired,
             status: string.isRequired,
-            icon: string.isRequired
+            icon: string.isRequired,
+            background: string.isRequired
         }).isRequired
     }).isRequired
 };
@@ -130,7 +131,9 @@ Main.defaultProps = {
             messageDefault: 'Ambrósio? How can I help you?',
             messageTyping: 'is typing...',
             status: 'Online',
-			icon: '🟢'
+            icon: '🟢',
+            background: '#202C33',
+            color: '#fff'
         }
     },
 };
