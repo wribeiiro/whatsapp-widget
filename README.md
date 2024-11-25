@@ -1,4 +1,4 @@
-# whatsapp-widget 
+# whatsapp-widreact
 Simple floating react plugin in the footer of your website 🚀
 
 # Example
