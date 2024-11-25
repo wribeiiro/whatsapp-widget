@@ -2,12 +2,12 @@ import React from 'react';
 import { string, bool, shape, func } from 'prop-types';
 import Footer from '../Footer';
 
-const Body = ({ botOptions, message, isVisible, openWhatsAppModal }) => (
+const Body = ({ optionsBot, message, isVisible, openWhatsAppModal }) => (
     <div className="whatsapp-widget-chat-chat" id="whatsapp-widget-chat-chat">
         {isVisible && (
             <div className="whatsapp-widget-chat-chat message" id="messageBot">
                 <div className="whatsapp-widget-chat-chat header" id="userBot">
-                    {botOptions.name}
+                    {optionsBot.name}
                 </div>
                 <div className="whatsapp-widget-chat-chat msg" id="msgBot">
                     {message}
@@ -26,9 +26,9 @@ const Body = ({ botOptions, message, isVisible, openWhatsAppModal }) => (
 );
 
 Body.propTypes = {
-    botOptions: shape({
-        name: string.isRequired
-    }).isRequired,
+    optionsBot: shape({
+        name: string
+    }),
     message: string.isRequired,
     isVisible: bool.isRequired,
     openWhatsAppModal: func.isRequired
