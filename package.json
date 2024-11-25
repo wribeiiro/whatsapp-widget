@@ -47,6 +47,6 @@
         "ajv": "^8.17.1"
     },
     "publishConfig": {
-        "@wribeiiro:registry": "https://npm.pkg.github.com"
+        "@wribeiiro:registry": "https://registry.npmjs.org"
     }
 }
