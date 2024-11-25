@@ -1,6 +1,6 @@
 {
     "name": "whatsapp-widreact",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "description": "Simple floating react plugin in the footer of your website 🚀",
     "author": {
         "name": "Wellisson Ribeiro",
@@ -45,5 +45,8 @@
         "@testing-library/react": "^16.0.1",
         "@testing-library/user-event": "^14.5.2",
         "ajv": "^8.17.1"
+    },
+    "publishConfig": {
+        "@wribeiiro:registry": "https://npm.pkg.github.com"
     }
 }
