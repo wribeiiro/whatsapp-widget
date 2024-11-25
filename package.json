@@ -1,7 +1,13 @@
 {
-    "name": "whatsapp-widreact",
+    "name": "whatsapp-widget",
     "version": "0.1.0",
-    "private": true,
+    "description": "Simple floating react plugin in the footer of your website 🚀",
+    "author": {
+        "name": "Wellisson Ribeiro",
+        "email": "welleh10@gmail.com"
+    },
+    "license": "MIT",
+    "private": false,
     "dependencies": {
         "@testing-library/jest-dom": "^5.17.0",
         "react": "^18.3.1",
